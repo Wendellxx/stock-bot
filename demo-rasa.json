@@ -1,0 +1,645 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "high-priced",
+        "synonyms": ["expensive","high price", "hi"]
+      },
+      {
+        "value": "low-priced",
+        "synonyms": ["cheap", "low price", "lo"]
+      },
+      {
+        "value": "medium-priced",
+        "synonyms": ["medium","medium price", "mid"]
+      },
+      {
+        "value": "northern",
+        "synonyms": ["north", "norths"]
+      },
+      {
+        "value": "southern",
+        "synonyms": ["south", "souths"]
+      },
+       {
+        "value": "central",
+        "synonyms": ["center", "centers"]
+      },
+       {
+        "value": "western",
+        "synonyms": ["west", "wests"]
+      },
+       {
+        "value": "eastern",
+        "synonyms": ["east", "easts"]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+       {
+        "text": "hello ", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "Hello ", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+       {
+        "text": "thank you!",
+        "intent": "thanks",
+        "entities": []
+      },
+       {
+        "text": "thanks",
+        "intent": "thanks",
+        "entities": []
+      },
+       {
+        "text": "thank you",
+        "intent": "thanks",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "What could you do for me",
+        "intent": "inquiry",
+        "entities": []
+       },
+       {
+        "text": "What could you do",
+        "intent": "inquiry",
+        "entities": []
+       },
+       {
+        "text": "What are you doing for",
+        "intent": "inquiry",
+        "entities": []
+       },
+        {
+        "text": "Who are you",
+        "intent": "inquiry",
+        "entities": []
+       },
+       {
+        "text": "Who is there",
+        "intent": "inquiry",
+        "entities": []
+       },
+      {
+        "text": "i'm looking for some stock information",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "I want to know some stock information",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "I am searching for some stock information",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "and it's company is in the northern US",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "northern",
+            "entity": "location"
+          }
+        ]
+      },
+        {
+        "text": "it's company is in the northern US",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+        {
+        "text": "in the southern US",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me some information about several high-priced stocks",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 39,
+            "end": 50,
+            "value": "high-priced",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "show me some low-priced stocks in the northern US",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 23,
+            "value": "low-priced",
+            "entity": "price"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "northern",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me some medium-priced stock in the central US", 
+        "intent": "stock_search", 
+        "entities": [
+          {
+            "start": 29, 
+            "end": 35, 
+            "value": "central", 
+            "entity": "location"
+          }, 
+          {
+            "start": 13, 
+            "end": 26, 
+            "value": "medium-priced", 
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "search for stocks",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "anywhere in the western US",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "western",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "anywhere near 18328",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "18328",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for medium-priced stocks",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 30,
+            "value": "medium-priced",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "I am looking a stock in 29432",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "29432",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for some information about stocks in the northern America",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 54,
+            "end": 62,
+            "value": "northern",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "central expensive stock",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "central",
+            "entity": "location"
+          },
+          {
+            "start": 8,
+            "end": 17,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "good bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+       {
+        "text": "nothing, bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+       {
+        "text": "It's ok, bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "end", 
+        "intent": "goodbye", 
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+        
+        {
+        "text": "uh aapl, thanks",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "aapl",
+            "entity": "company"
+          }
+        ]
+      },
+        
+       {
+        "text": "uh tsla, thanks",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "tsla",
+            "entity": "company"
+          }
+        ]
+      }, 
+        {
+        "text": "uh sed, thanks",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 6,
+            "value": "sed",
+            "entity": "company"
+          }
+        ]
+      }, 
+        {
+        "text": "uh isrg, thanks",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "isrg",
+            "entity": "company"
+          }
+        ]
+      },
+        {
+        "text": "uh nvr, thanks",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 6,
+            "value": "nvr",
+            "entity": "company"
+          }
+        ]
+      },
+        {
+        "text": "uh goog, thanks",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "goog",
+            "entity": "company"
+          }
+        ]
+      },
+        {
+        "text": "uh mkl, thanks",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 6,
+            "value": "mkl",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "MKL, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "mkl",
+            "entity": "company"
+          }
+        ]
+      },
+        {
+        "text": "more information about aapl, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "aapl",
+            "entity": "company"
+          }
+        ]
+      },
+       {
+        "text": "more information about goog, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "goog",
+            "entity": "company"
+          }
+        ]
+      },
+       {
+        "text": "more information about tlsa, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "tlsa",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "more information about sed, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 26,
+            "value": "sed",
+            "entity": "company"
+          }
+        ]
+      },
+       {
+        "text": "more information about isrg, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "tlsa",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "more information about nvr, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 26,
+            "value": "tlsa",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "more information about mkl, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 26,
+            "value": "mkl",
+            "entity": "company"
+          }
+        ]
+      },
+       {
+        "text": "how about mkl, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 13,
+            "value": "mkl",
+            "entity": "company"
+          }
+        ]
+      },
+       {
+        "text": "how about aapl, please",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "aapl",
+            "entity": "company"
+          }
+        ]
+      },
+       {
+        "text": "how about aapl",
+        "intent": "company_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "aapl",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I want to know its latest price.",
+        "intent": "info_search",
+        "entities": []
+      },
+       {
+        "text": "I want to know its extended price.",
+        "intent": "info_search",
+        "entities": []
+      },
+       {
+        "text": "I want to know its average totall volume.",
+        "intent": "info_search",
+        "entities": []
+      }, 
+       {
+        "text": "I want to know its average highest price during last 52 weeks.",
+        "intent": "info_search",
+        "entities": []
+      },
+      {
+        "text": "latest price.",
+        "intent": "info_search",
+        "entities": []
+      },
+       {
+        "text": "totall volume.",
+        "intent": "info_search",
+        "entities": []
+      },
+       {
+        "text": "highest price during last 52 weeks",
+        "intent": "info_search",
+        "entities": []
+      },
+      {
+        "text": "extend price",
+        "intent": "info_search",
+        "entities": []
+      },
+       {
+        "text": "all information about it",
+        "intent": "info_search",
+        "entities": []
+      },
+      {
+        "text": "all information about aapl",
+        "intent": "info_search",
+        "entities": []
+      },
+       {
+        "text": "more information about other stocks, please",
+        "intent": "info_search",
+        "entities": []
+      }
+    ]
+  }
+}
