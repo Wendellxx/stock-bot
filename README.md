@@ -99,7 +99,7 @@ Rasa是一个基于多轮对话的框架，其中包含两个模块Rasa core与R
 ![image](https://github.com/Wendellxx/stock-bot/blob/master/images/9.png)   
   
 ### 通过wxpy将聊天机器人与微信集成
-[可参考这个链接](https://github.com/youfou/wxpy)  
+[具体实现可参考这个链接](https://github.com/youfou/wxpy)  
 
 
 
